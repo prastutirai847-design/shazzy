@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="campus-kart-favicon" x1="8" y1="2" x2="58" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#765AFF" />
+      <stop offset=".52" stop-color="#5B3DF5" />
+      <stop offset="1" stop-color="#3E20C1" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#campus-kart-favicon)" />
+  <path d="M14.6 17.6H19.2L24.1 39.2A4.1 4.1 0 0 0 28.2 42.5H44.4A4 4 0 0 0 48.4 39.3L51.9 24.2H20.7" stroke="white" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="29.6" cy="50.4" r="3" fill="white" />
+  <circle cx="45" cy="50.4" r="3" fill="white" />
+</svg>

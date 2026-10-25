@@ -1,0 +1,228 @@
+.section {
+  margin-top: clamp(42px, 4.8vw, 62px);
+  container-type: inline-size;
+  scroll-margin-top: calc(var(--topbar-height) + 18px);
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(20px, 2.8vw, 30px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-surface-subtle);
+  background-image: radial-gradient(rgba(46, 34, 48, 0.075) 0.6px, transparent 0.6px);
+  background-size: 14px 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.skeletonCard {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.skeletonMedia,
+.skeletonMeta,
+.skeletonTitle,
+.skeletonTitleShort,
+.skeletonSeller,
+.skeletonPrice,
+.skeletonAction {
+  background-color: var(--color-canvas-deep);
+  background-image: linear-gradient(
+    100deg,
+    var(--color-canvas-deep) 22%,
+    #f5efe2 42%,
+    var(--color-canvas-deep) 62%
+  );
+  background-size: 220% 100%;
+  animation: shimmer 1.5s linear infinite;
+}
+
+.skeletonMedia {
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+}
+
+.skeletonBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 168px;
+  padding: 12px 7px 6px;
+}
+
+.skeletonMeta {
+  width: 46%;
+  height: 9px;
+  border-radius: 4px;
+}
+
+.skeletonTitle {
+  width: 92%;
+  height: 13px;
+  margin-top: 13px;
+  border-radius: 4px;
+}
+
+.skeletonTitleShort {
+  width: 64%;
+  height: 13px;
+  margin-top: 7px;
+  border-radius: 4px;
+}
+
+.skeletonSeller {
+  width: 42%;
+  height: 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+
+.skeletonFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 11px;
+  border-top: 1px solid var(--color-border);
+}
+
+.skeletonPrice {
+  width: 58px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.skeletonAction {
+  width: 72px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.statePanel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 18px;
+  padding: 20px 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.stateIcon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(91, 61, 245, 0.14);
+  border-radius: 12px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary-text);
+}
+
+.statePanel[data-tone='error'] .stateIcon {
+  border-color: rgba(176, 114, 21, 0.2);
+  background: var(--color-accent-soft);
+  color: var(--color-accent-ink);
+}
+
+.stateCopy {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.stateTitle {
+  color: var(--color-ink);
+  font-size: 1rem;
+  font-weight: 610;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+.stateText {
+  max-width: 62ch;
+  margin-top: 4px;
+  color: var(--color-ink-secondary);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.stateAction {
+  flex: none;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 180% 0;
+  }
+
+  to {
+    background-position: -80% 0;
+  }
+}
+
+@container (min-width: 560px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@container (min-width: 820px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    margin-top: 36px;
+  }
+
+  .panel {
+    padding: 18px 16px;
+  }
+
+  .grid {
+    margin-top: 16px;
+  }
+
+  .statePanel {
+    flex-wrap: wrap;
+    margin-top: 16px;
+    padding: 18px;
+  }
+
+  .stateAction {
+    width: 100%;
+  }
+
+  .stateAction a,
+  .stateAction button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .panel {
+    padding: 16px 13px;
+  }
+
+  .statePanel {
+    padding: 16px;
+  }
+}

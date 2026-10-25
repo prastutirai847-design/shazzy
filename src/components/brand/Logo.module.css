@@ -1,0 +1,26 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-ink);
+}
+
+.mark {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: 9px;
+  box-shadow: 0 6px 14px -10px rgba(74, 42, 218, 0.65);
+}
+
+.wordmark {
+  font-size: 1.065rem;
+  font-weight: 640;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+}
+
+.kart {
+  color: var(--color-primary-text);
+}

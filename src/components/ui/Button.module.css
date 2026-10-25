@@ -1,0 +1,126 @@
+.button {
+  --button-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--button-height);
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 560;
+  line-height: 1;
+  letter-spacing: -0.012em;
+  white-space: nowrap;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) ease,
+    border-color var(--duration-fast) ease,
+    color var(--duration-fast) ease,
+    box-shadow var(--duration-fast) ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button > svg {
+  flex: none;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+  transform: none;
+}
+
+.sm {
+  --button-height: 38px;
+  padding: 0 13px;
+  border-radius: 9px;
+  font-size: 0.8125rem;
+}
+
+.md {
+  --button-height: 42px;
+}
+
+.lg {
+  --button-height: 48px;
+  padding: 0 20px;
+  border-radius: 11px;
+  font-size: 0.9375rem;
+}
+
+.primary {
+  border-color: rgba(42, 22, 100, 0.18);
+  background-color: var(--color-primary);
+  background-image: var(--gradient-primary);
+  color: var(--color-primary-contrast);
+  box-shadow: var(--shadow-button);
+}
+
+.primary:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 3px 0 rgba(52, 28, 152, 0.34),
+    0 16px 24px -16px rgba(58, 32, 160, 0.6);
+}
+
+.primary:active {
+  transform: translateY(2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 0 rgba(52, 28, 152, 0.3);
+}
+
+.secondary {
+  border-color: var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  box-shadow: 0 1px 0 rgba(46, 34, 48, 0.08);
+}
+
+.secondary:hover {
+  border-color: rgba(46, 34, 48, 0.32);
+  background: var(--color-surface);
+  box-shadow:
+    0 2px 0 rgba(46, 34, 48, 0.1),
+    var(--shadow-card);
+}
+
+.ghost {
+  color: var(--color-ink-secondary);
+}
+
+.ghost:hover {
+  background: rgba(46, 34, 48, 0.06);
+  color: var(--color-ink);
+}
+
+.inverse {
+  background: var(--color-ink-inverse);
+  color: var(--color-primary-text);
+  box-shadow:
+    inset 0 -1px 0 rgba(46, 34, 48, 0.12),
+    0 2px 0 rgba(26, 12, 72, 0.45);
+}
+
+.inverse:hover {
+  background: #ffffff;
+  box-shadow:
+    inset 0 -1px 0 rgba(46, 34, 48, 0.1),
+    0 3px 0 rgba(26, 12, 72, 0.45);
+}
+
+.inverse:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 -1px 0 rgba(46, 34, 48, 0.12), 0 0 0 rgba(26, 12, 72, 0.4);
+}

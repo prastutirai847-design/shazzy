@@ -1,0 +1,159 @@
+.welcome {
+  container-type: inline-size;
+  margin-bottom: clamp(28px, 3.4vw, 44px);
+}
+
+.top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+}
+
+.copy {
+  min-width: 0;
+  flex: 1 1 420px;
+}
+
+.greeting {
+  color: var(--color-ink);
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  font-weight: 610;
+  line-height: 1.15;
+  letter-spacing: -0.042em;
+  text-wrap: balance;
+}
+
+.serif {
+  color: var(--color-primary-text);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.subtitle {
+  max-width: 52ch;
+  margin-top: 7px;
+  color: var(--color-ink-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.cta {
+  flex: none;
+}
+
+.ctaButton {
+  white-space: nowrap;
+}
+
+.quick {
+  margin-top: clamp(20px, 2.4vw, 26px);
+}
+
+.quickHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-bottom: 10px;
+}
+
+.quickLabel {
+  color: var(--color-ink-tertiary);
+  font-size: 0.625rem;
+  font-weight: 610;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.quickNote {
+  color: var(--color-ink-tertiary);
+  font-size: 0.71875rem;
+  line-height: 1.5;
+}
+
+.quickGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+
+@container (min-width: 340px) {
+  .quickGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .quickGrid > :last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@container (max-width: 559px) {
+  .quickGrid > a > svg {
+    display: none;
+  }
+}
+
+@container (min-width: 660px) {
+  .quickGrid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .quickGrid > :nth-child(-n + 3) {
+    grid-column: span 2;
+  }
+
+  .quickGrid > :nth-child(n + 4) {
+    grid-column: span 3;
+  }
+}
+
+@container (min-width: 1000px) {
+  .quickGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .quickGrid > :nth-child(n) {
+    grid-column: auto;
+  }
+}
+
+@container (max-width: 680px) {
+  .top {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .copy {
+    flex-basis: 100%;
+  }
+
+  .cta {
+    width: 100%;
+  }
+
+  .ctaButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .greeting {
+    font-size: 1.55rem;
+  }
+
+  .subtitle {
+    margin-top: 6px;
+    font-size: 0.9rem;
+  }
+
+  .quickNote {
+    font-size: 0.6875rem;
+  }
+}

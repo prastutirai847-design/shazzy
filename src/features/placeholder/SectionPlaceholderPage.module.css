@@ -1,0 +1,73 @@
+.page {
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.stateWrap {
+  padding: clamp(8px, 2.6vw, 24px) 24px;
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface-subtle);
+}
+
+.statusList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 22px;
+  color: var(--color-ink-secondary);
+  font-size: 0.71875rem;
+  font-weight: 510;
+  line-height: 1.4;
+}
+
+.statusList span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.statusList svg {
+  flex: none;
+  color: var(--color-success);
+}
+
+.statusList .pending {
+  color: var(--color-ink-tertiary);
+}
+
+.statusList .pending svg {
+  color: var(--color-ink-tertiary);
+}
+
+@media (max-width: 560px) {
+  .stateWrap {
+    padding: 6px 14px;
+  }
+
+  .statusBar {
+    padding: 13px 16px;
+  }
+
+  .statusList {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
