@@ -11,9 +11,9 @@ import {
   Sparkles,
 } from 'lucide-react'
 import { useRef, useState } from 'react'
+import calculatorImage from '../../assets/listings/calculator.jpg'
+import guitarImage from '../../assets/listings/guitar.jpg'
 import headphonesImage from '../../assets/listings/headphones.jpg'
-import jacketImage from '../../assets/listings/jacket.jpg'
-import lampImage from '../../assets/listings/lamp.jpg'
 import { ProductCard } from '../../components/marketplace/ProductCard'
 import {
   RecommendedListings,
@@ -47,7 +47,7 @@ import styles from './HomePage.module.css'
 
 type CategoryId = 'all' | ProductCategoryId
 type SortId = 'curated' | 'newest' | 'price'
-type FilterId = 'under-2000' | 'like-new' | 'north'
+type FilterId = 'under-2000' | 'like-new' | 'hostel'
 
 const sortOptions: ReadonlyArray<{ id: SortId; label: string }> = [
   { id: 'curated', label: 'Curated' },
@@ -58,7 +58,7 @@ const sortOptions: ReadonlyArray<{ id: SortId; label: string }> = [
 const filterOptions: ReadonlyArray<{ id: FilterId; label: string }> = [
   { id: 'under-2000', label: 'Under ₹2,000' },
   { id: 'like-new', label: 'Like new' },
-  { id: 'north', label: 'North side' },
+  { id: 'hostel', label: 'Hostel pickup' },
 ]
 
 const heroListing = sampleListings[0]
@@ -85,7 +85,7 @@ export function HomePage() {
     if (activeFilters.has('like-new') && listing.condition !== 'Like New') {
       return false
     }
-    if (activeFilters.has('north') && listing.area !== 'north') {
+    if (activeFilters.has('hostel') && listing.area !== 'hostel') {
       return false
     }
     return true
@@ -181,8 +181,8 @@ export function HomePage() {
           </h1>
 
           <p className={styles.heroText}>
-            Textbooks, tech, and dorm-room treasures from students just across
-            the quad. Better prices, a smaller footprint, and a good story
+            Textbooks, lab gear, and hostel-room essentials from students just
+            across campus. Better prices, a smaller footprint, and a good story
             attached.
           </p>
 
@@ -230,7 +230,7 @@ export function HomePage() {
 
           <figure className={styles.smallFrame}>
             <img
-              src={jacketImage}
+              src={calculatorImage}
               alt=""
               width={1200}
               height={900}
@@ -251,8 +251,8 @@ export function HomePage() {
 
         <div className={styles.heroStrip} aria-hidden="true">
           <img src={headphonesImage} alt="" width={1200} height={900} decoding="async" />
-          <img src={lampImage} alt="" width={1200} height={900} decoding="async" />
-          <img src={jacketImage} alt="" width={1200} height={900} decoding="async" />
+          <img src={calculatorImage} alt="" width={1200} height={900} decoding="async" />
+          <img src={guitarImage} alt="" width={1200} height={900} decoding="async" />
         </div>
       </section>
 
@@ -278,7 +278,7 @@ export function HomePage() {
       >
         <SectionHeading
           eyebrow="The campus feed"
-          title="Fresh from nearby."
+          title="Fresh from campus."
           titleId="feed-title"
           description="A first look at what students will browse: useful things, fair prices, and a short walk to pick them up."
           meta={<Badge variant="accent">Sample listings</Badge>}
@@ -399,8 +399,8 @@ export function HomePage() {
             <span className={styles.serif}>someone&rsquo;s next find.</span>
           </h2>
           <p className={styles.bandText}>
-            The shelf you have outgrown could furnish someone&rsquo;s first
-            apartment. Selling on Campus Kart is designed to stay simple,
+            The shelf you have outgrown could kit out someone&rsquo;s first
+            hostel room. Selling on Campus Kart is designed to stay simple,
             local, and kind.
           </p>
           <div className={styles.bandActions}>

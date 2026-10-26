@@ -60,6 +60,11 @@ export const browseSortOptions: ReadonlyArray<{ id: BrowseSort; label: string }>
 export const DEFAULT_BROWSE_SORT: BrowseSort = 'newest'
 
 const categoryIds = new Set<string>(['all', ...productCategories.map(({ id }) => id)])
+const legacyCategoryAliases: Readonly<Record<string, ProductCategoryId>> = {
+  cycles: 'hobbies-lifestyle',
+  furniture: 'hostel-essentials',
+  accessories: 'hostel-essentials',
+}
 const conditionById = new Map(conditionOptions.map((option) => [option.id, option]))
 const priceRangeById = new Map(priceRangeOptions.map((option) => [option.id, option]))
 
@@ -84,16 +89,25 @@ function isBrowseSort(value: string | null): value is BrowseSort {
   return browseSortOptions.some((option) => option.id === value)
 }
 
+function normalizeCategory(rawCategory: string | null): BrowseCategory {
+  if (!rawCategory) {
+    return 'all'
+  }
+
+  if (categoryIds.has(rawCategory)) {
+    return rawCategory as BrowseCategory
+  }
+
+  return legacyCategoryAliases[rawCategory] ?? 'all'
+}
+
 export function parseBrowseCriteria(params: URLSearchParams): BrowseCriteria {
   const rawCategory = params.get(BROWSE_PARAMS.category)
   const sort = params.get(BROWSE_PARAMS.sort)
 
   return {
     query: params.get(BROWSE_PARAMS.query) ?? '',
-    category:
-      rawCategory && categoryIds.has(rawCategory)
-        ? (rawCategory as BrowseCategory)
-        : 'all',
+    category: normalizeCategory(rawCategory),
     conditions: new Set(
       readList(params.get(BROWSE_PARAMS.condition)).filter(isConditionFilterId),
     ),

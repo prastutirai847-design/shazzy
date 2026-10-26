@@ -1,9 +1,12 @@
-import booksImage from '../assets/listings/books.jpg'
+import calculatorImage from '../assets/listings/calculator.jpg'
+import draftingSetImage from '../assets/listings/drafting-set.jpg'
+import guitarImage from '../assets/listings/guitar.jpg'
 import headphonesImage from '../assets/listings/headphones.jpg'
-import jacketImage from '../assets/listings/jacket.jpg'
 import keyboardImage from '../assets/listings/keyboard.jpg'
-import lampImage from '../assets/listings/lamp.jpg'
-import plantersImage from '../assets/listings/planters.jpg'
+import labCoatImage from '../assets/listings/lab-coat.jpg'
+import studyChairImage from '../assets/listings/study-chair.jpg'
+import studyLampImage from '../assets/listings/study-lamp.jpg'
+import textbooksImage from '../assets/listings/textbooks.jpg'
 import { productCategories, type ProductCategoryId } from './categories'
 
 export type ListingCategory = ProductCategoryId
@@ -21,14 +24,14 @@ export interface Listing {
     year: string
   }
   pickup: string
-  area: 'north' | 'east' | 'main'
+  area: 'hostel' | 'academic' | 'main-gate'
   postedDays: number
   image?: string
   imageAlt?: string
 }
 
 export const listingCategories: ReadonlyArray<{ id: 'all' | ListingCategory; label: string }> = [
-  { id: 'all', label: 'All finds' },
+  { id: 'all', label: 'All items' },
   ...productCategories.map(({ id, label }) => ({ id, label })),
 ]
 
@@ -36,93 +39,138 @@ export const listingCategories: ReadonlyArray<{ id: 'all' | ListingCategory; lab
 export const sampleListings: Listing[] = [
   {
     id: 'headphones',
-    title: 'Noise-cancelling over-ear headphones',
+    title: 'Noise-isolating over-ear headphones',
     description:
-      'Bought these for long library sessions last semester and looked after them since. Noise cancelling still works cleanly, the ear pads are in good shape, and the charging cable and travel pouch are included. Selling because I have switched to earbuds for the walk between classes.',
+      'Bought these for late-night lab reports and long library sessions. The ear pads are in good shape, and the charging cable and travel pouch are included. I have switched to earbuds for the walk between classes, so these need a new desk.',
     category: 'electronics',
     condition: 'Like New',
-    price: 3499,
-    seller: { name: 'Maya R.', year: 'Junior' },
-    pickup: 'Library steps',
-    area: 'main',
+    price: 1199,
+    seller: { name: 'Ananya Rao', year: '3rd year' },
+    pickup: 'Hostel block C',
+    area: 'hostel',
     postedDays: 2,
     image: headphonesImage,
-    imageAlt: 'Charcoal over-ear headphones resting on a travertine block beside a cream knit blanket.',
+    imageAlt: 'Over-ear headphones.',
   },
   {
-    id: 'lamp',
-    title: 'Pleated mushroom table lamp',
+    id: 'calculator',
+    title: 'Casio FX-991ES scientific calculator',
     description:
-      'A warm little bedside lamp with a pleated shade and a solid walnut base. It has only been used in a non-smoking room and the inline switch works smoothly. I am downsizing before the end of term, so it needs a new desk to glow on.',
-    category: 'furniture',
-    condition: 'Like New',
-    price: 899,
-    seller: { name: 'Ines P.', year: 'Senior' },
-    pickup: 'East Village mailroom',
-    area: 'east',
+      'Used through first-year maths and physics. The slide cover is included and all the keys are working. I have moved to the calculator required for my branch, so this one is free to go.',
+    category: 'engineering-essentials',
+    condition: 'Good',
+    price: 650,
+    seller: { name: 'Rohan Mehta', year: '2nd year' },
+    pickup: 'Central library steps',
+    area: 'academic',
     postedDays: 1,
-    image: lampImage,
-    imageAlt: 'A pleated cream mushroom lamp with a walnut base glowing on a bedside table.',
+    image: calculatorImage,
+    imageAlt: 'A Casio FX-991ES scientific calculator.',
   },
   {
-    id: 'books',
-    title: 'Art history survey set',
+    id: 'textbooks',
+    title: 'Programming reference textbook bundle',
     description:
-      'A set of three survey texts covering ancient, medieval, and modern art. The pages are clean with light shelf wear on the covers and a few pencilled notes in the margins. Useful if you are taking the intro sequence next semester.',
+      'A set of programming and data structures reference books from my second year. The covers show some shelf wear, the pages are clean, and a few margin notes might actually help. Selling as a set because I am switching to PDFs.',
     category: 'books',
     condition: 'Good',
-    price: 1199,
-    seller: { name: 'Theo K.', year: 'Sophomore' },
-    pickup: 'North Hall lobby',
-    area: 'north',
+    price: 420,
+    seller: { name: 'Sneha Iyer', year: '3rd year' },
+    pickup: 'Hostel block A common room',
+    area: 'hostel',
     postedDays: 4,
-    image: booksImage,
-    imageAlt: 'A stack of green, gold, and terracotta clothbound books on a wooden table.',
+    image: textbooksImage,
+    imageAlt: 'A shelf of programming language textbooks.',
+  },
+  {
+    id: 'drafting-set',
+    title: 'Engineering drawing instrument set',
+    description:
+      'A compass set in a zip case with the usual drawing attachments. I used it for one semester of engineering drawing and the pieces are complete. A practical addition to a first-year kit.',
+    category: 'engineering-essentials',
+    condition: 'Like New',
+    price: 350,
+    seller: { name: 'Aditya Kulkarni', year: '2nd year' },
+    pickup: 'Drawing hall noticeboard',
+    area: 'academic',
+    postedDays: 3,
+    image: draftingSetImage,
+    imageAlt: 'A compass and drafting instrument set arranged in an open case.',
+  },
+  {
+    id: 'lab-coat',
+    title: 'White lab coat, medium',
+    description:
+      'One white lab coat in medium, washed and ready for a first-year chemistry or workshop lab. There are no stains or tears. I keep a spare and only need one this semester.',
+    category: 'engineering-essentials',
+    condition: 'Good',
+    price: 250,
+    seller: { name: 'Meera Nair', year: '2nd year' },
+    pickup: 'Chemistry lab corridor',
+    area: 'academic',
+    postedDays: 5,
+    image: labCoatImage,
+    imageAlt: 'A white lab coat.',
+  },
+  {
+    id: 'study-lamp',
+    title: 'Warm LED study lamp',
+    description:
+      'A compact LED study lamp with a flexible neck that has lived on my hostel desk for a year. It still works reliably. I am selling it because my new room has a built-in light above the desk.',
+    category: 'hostel-essentials',
+    condition: 'Good',
+    price: 450,
+    seller: { name: 'Kabir Shah', year: '3rd year' },
+    pickup: 'Hostel block B',
+    area: 'hostel',
+    postedDays: 2,
+    image: studyLampImage,
+    imageAlt: 'A study lamp.',
+  },
+  {
+    id: 'study-chair',
+    title: 'Folding study chair',
+    description:
+      'A sturdy folding chair that fits under a hostel desk. The cushion is clean and the frame folds flat for moving day. Pickup only; I can help carry it down to the block entrance.',
+    category: 'hostel-essentials',
+    condition: 'Good',
+    price: 700,
+    seller: { name: 'Ishita Sen', year: 'M.Tech' },
+    pickup: 'Hostel block D entrance',
+    area: 'hostel',
+    postedDays: 6,
+    image: studyChairImage,
+    imageAlt: 'A folding study chair.',
+  },
+  {
+    id: 'guitar',
+    title: 'Acoustic guitar with carry bag',
+    description:
+      'An acoustic guitar that got me through two years of campus open-mics. The strings were changed recently and the carry bag is included. I am graduating and cannot take it home, so it should go to someone who will keep playing.',
+    category: 'hobbies-lifestyle',
+    condition: 'Good',
+    price: 2200,
+    seller: { name: 'Arjun Menon', year: '4th year' },
+    pickup: 'Student activity centre',
+    area: 'academic',
+    postedDays: 7,
+    image: guitarImage,
+    imageAlt: 'An acoustic guitar leaning against a bookcase.',
   },
   {
     id: 'keyboard',
-    title: 'Cream 65% mechanical keyboard',
+    title: 'Compact mechanical keyboard',
     description:
-      'A compact 65% board with cream keycaps and a soft sage accent. It types quietly, the stabilisers are tuned, and it comes with its original braided cable. Used gently at a desk at home; I am moving to a smaller setup.',
+      'A compact mechanical keyboard with cream keycaps and a braided USB-C cable. The switches are quiet enough for a shared room, all keys have been tested, and the original box is included. A comfortable upgrade from laptop keys.',
     category: 'electronics',
     condition: 'Like New',
-    price: 2499,
-    seller: { name: 'Priya S.', year: 'Grad student' },
-    pickup: 'North studio',
-    area: 'north',
+    price: 1299,
+    seller: { name: 'Devika Joshi', year: '3rd year' },
+    pickup: 'Computer lab annex',
+    area: 'academic',
     postedDays: 3,
     image: keyboardImage,
-    imageAlt: 'A cream and sage mechanical keyboard on a light oak desk next to a notebook.',
-  },
-  {
-    id: 'planters',
-    title: 'Hand-thrown planter duo',
-    description:
-      'Two hand-thrown stoneware planters in a warm sand glaze, one slightly taller than the other. Both have drainage holes and saucers. The pothos in the photo is staying with me, but the planters are ready for your next cutting.',
-    category: 'other',
-    condition: 'Good',
-    price: 499,
-    seller: { name: 'Noor A.', year: 'Sophomore' },
-    pickup: 'Arts building',
-    area: 'east',
-    postedDays: 6,
-    image: plantersImage,
-    imageAlt: 'Two hand-thrown ceramic planters, one holding a trailing pothos plant.',
-  },
-  {
-    id: 'jacket',
-    title: 'Washed denim trucker jacket',
-    description:
-      'A broken-in denim trucker jacket with the soft, faded blue you cannot fake. It has honest wear at the cuffs and a sturdy zip, with no rips at the seams. Fits a relaxed medium; happy to share measurements before you commit.',
-    category: 'accessories',
-    condition: 'Fair',
-    price: 699,
-    seller: { name: 'Sam O.', year: 'Junior' },
-    pickup: 'Student union',
-    area: 'main',
-    postedDays: 5,
-    image: jacketImage,
-    imageAlt: 'A washed-blue denim jacket hanging on a wooden hanger against a cream wall.',
+    imageAlt: 'A mechanical keyboard.',
   },
 ]
 

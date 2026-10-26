@@ -9,15 +9,15 @@
   width: 32px;
   height: 32px;
   flex: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px -6px rgba(74, 42, 218, 0.5);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 10px -6px rgba(0, 102, 214, 0.5);
 }
 
 .wordmark {
-  font-size: 1.0625rem;
-  font-weight: 660;
+  font-size: var(--text-lg);
+  font-weight: 700;
   line-height: 1;
-  letter-spacing: -0.048em;
+  letter-spacing: -0.032em;
   white-space: nowrap;
 }
 

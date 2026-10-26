@@ -177,8 +177,8 @@ function ListingDetailsView({ listing }: ListingDetailsViewProps) {
             <div>
               <p className={styles.meetupTitle}>Plan a campus meetup</p>
               <p className={styles.meetupText}>
-                Agree on a public spot like the library steps or student union
-                before you exchange.
+                Agree on a public spot like the central library steps or main
+                gate before you exchange.
               </p>
             </div>
           </aside>

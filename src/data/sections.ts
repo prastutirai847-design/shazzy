@@ -60,11 +60,11 @@ export const sections: Record<SectionId, Section> = {
     label: 'Categories',
     path: '/categories',
     icon: LayoutGrid,
-    summary: 'Books, tech, and dorm life.',
+    summary: 'Lab gear, tech, and hostel life.',
     placeholder: {
       title: 'The shelves are being stocked',
       description:
-        'Curated shelves for textbooks, tech, furniture, fashion, and more will live here, each one filled by students on your campus.',
+        'Curated shelves for engineering essentials, textbooks, tech, hostel gear, hobbies, and more will live here, each one filled by students on your campus.',
     },
   },
   wishlist: {

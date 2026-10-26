@@ -22,7 +22,7 @@ export function CategorySection({
         eyebrow="Browse the catalog"
         title="Browse by category."
         titleId="category-section-title"
-        description="Textbooks, tech, cycles, and the useful odds and ends of campus life. Choose a shelf to filter the sample listings below."
+        description="Lab gear, textbooks, tech, and the practical odds and ends of hostel life. Choose a shelf to filter the sample listings below."
       />
 
       <ul className={styles.grid}>

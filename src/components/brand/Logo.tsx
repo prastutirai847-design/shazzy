@@ -21,9 +21,9 @@ export function Logo({ className, markOnly = false }: LogoProps) {
       >
         <defs>
           <linearGradient id={gradientId} x1="4" y1="1" x2="29" y2="32" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#765AFF" />
-            <stop offset="0.52" stopColor="#5B3DF5" />
-            <stop offset="1" stopColor="#3E20C1" />
+            <stop stopColor="#4DA3FF" />
+            <stop offset="0.52" stopColor="#007AFF" />
+            <stop offset="1" stopColor="#0062CC" />
           </linearGradient>
         </defs>
         <rect width="32" height="32" rx="9" fill={`url(#${gradientId})`} />

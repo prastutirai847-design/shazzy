@@ -1,19 +1,19 @@
 import {
-  Armchair,
-  Backpack,
-  Bike,
+  BedDouble,
   BookOpen,
+  DraftingCompass,
+  Guitar,
   Laptop,
   Package,
   type LucideIcon,
 } from 'lucide-react'
 
 export type ProductCategoryId =
-  | 'books'
   | 'electronics'
-  | 'cycles'
-  | 'furniture'
-  | 'accessories'
+  | 'engineering-essentials'
+  | 'books'
+  | 'hostel-essentials'
+  | 'hobbies-lifestyle'
   | 'other'
 
 export interface ProductCategory {
@@ -23,12 +23,16 @@ export interface ProductCategory {
 }
 
 export const productCategories: ReadonlyArray<ProductCategory> = [
-  { id: 'books', label: 'Books & Notes', icon: BookOpen },
   { id: 'electronics', label: 'Electronics', icon: Laptop },
-  { id: 'cycles', label: 'Cycles', icon: Bike },
-  { id: 'furniture', label: 'Furniture', icon: Armchair },
-  { id: 'accessories', label: 'Accessories', icon: Backpack },
-  { id: 'other', label: 'Other Items', icon: Package },
+  {
+    id: 'engineering-essentials',
+    label: 'Engineering essentials',
+    icon: DraftingCompass,
+  },
+  { id: 'books', label: 'Books & notes', icon: BookOpen },
+  { id: 'hostel-essentials', label: 'Hostel essentials', icon: BedDouble },
+  { id: 'hobbies-lifestyle', label: 'Hobbies & lifestyle', icon: Guitar },
+  { id: 'other', label: 'Other items', icon: Package },
 ]
 
 export const categoryLabels = Object.fromEntries(

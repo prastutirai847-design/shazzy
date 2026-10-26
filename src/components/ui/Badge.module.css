@@ -7,9 +7,9 @@
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
   font-size: 0.625rem;
-  font-weight: 640;
+  font-weight: 600;
   line-height: 1.25;
-  letter-spacing: 0.055em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -19,7 +19,7 @@
 }
 
 .soft {
-  border-color: rgba(91, 61, 245, 0.12);
+  border-color: rgba(0, 122, 255, 0.12);
   background: var(--color-primary-soft);
   color: var(--color-primary-text);
 }
@@ -31,13 +31,13 @@
 }
 
 .success {
-  border-color: rgba(44, 106, 76, 0.12);
+  border-color: rgba(36, 138, 61, 0.12);
   background: var(--color-success-soft);
   color: var(--color-success);
 }
 
 .accent {
-  border-color: rgba(168, 106, 18, 0.14);
+  border-color: rgba(255, 149, 0, 0.16);
   background: var(--color-accent-soft);
   color: var(--color-accent-ink);
 }
