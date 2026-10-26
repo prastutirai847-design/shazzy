@@ -17,8 +17,8 @@
 }
 
 .form:focus-within {
-  border-color: rgba(0, 122, 255, 0.5);
-  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.12);
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 4px var(--color-primary-soft);
 }
 
 .icon {
@@ -38,8 +38,8 @@
   border: 0;
   background: transparent;
   color: var(--color-ink);
-  font-size: var(--text-base);
-  letter-spacing: -0.012em;
+  font-size: var(--type-body-size);
+  letter-spacing: var(--type-body-tracking);
 }
 
 .input::placeholder {
@@ -102,7 +102,7 @@
 }
 
 .page .input {
-  font-size: var(--text-base);
+  font-size: var(--type-body-size);
 }
 
 .page .submit {
@@ -114,11 +114,11 @@
   background-image: var(--gradient-primary);
   color: var(--color-primary-contrast);
   box-shadow: var(--shadow-button);
-  font-size: var(--text-sm);
+  font-size: var(--type-callout-size);
 }
 
 .page .submit:hover {
-  filter: brightness(1.04);
+  filter: brightness(1.02);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.18),
     0 2px 6px rgba(0, 82, 180, 0.22);
@@ -141,7 +141,7 @@
 }
 
 .compact .input {
-  font-size: var(--text-sm);
+  font-size: var(--type-callout-size);
 }
 
 .compact .submit {

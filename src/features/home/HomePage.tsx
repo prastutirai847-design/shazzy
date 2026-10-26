@@ -176,7 +176,7 @@ export function HomePage() {
           <h1 id="home-title" className={styles.title}>
             <span className={styles.titleLine}>Good finds,</span>
             <span className={styles.titleLine}>
-              <span className={styles.serif}>already</span> on campus.
+              <span className={styles.accent}>already</span> on campus.
             </span>
           </h1>
 
@@ -189,25 +189,25 @@ export function HomePage() {
           <div className={styles.heroActions}>
             <ButtonAnchor href="#campus-feed" size="lg" variant="primary">
               Browse the feed
-              <ArrowDown size={17} strokeWidth={2} aria-hidden="true" />
+              <ArrowDown size={18} strokeWidth={1.8} aria-hidden="true" />
             </ButtonAnchor>
             <ButtonLink to="/sell" size="lg" variant="secondary">
-              <Plus size={17} strokeWidth={2} aria-hidden="true" />
+              <Plus size={18} strokeWidth={1.8} aria-hidden="true" />
               Sell something
             </ButtonLink>
           </div>
 
           <ul className={styles.promises} aria-label="How Campus Kart works">
             <li>
-              <ShieldCheck size={14} strokeWidth={1.9} aria-hidden="true" />
+              <ShieldCheck size={14} strokeWidth={1.8} aria-hidden="true" />
               Students only
             </li>
             <li>
-              <MapPin size={14} strokeWidth={1.9} aria-hidden="true" />
+              <MapPin size={14} strokeWidth={1.8} aria-hidden="true" />
               Campus pickup
             </li>
             <li>
-              <Recycle size={14} strokeWidth={1.9} aria-hidden="true" />
+              <Recycle size={14} strokeWidth={1.8} aria-hidden="true" />
               Second chances
             </li>
           </ul>
@@ -239,12 +239,12 @@ export function HomePage() {
           </figure>
 
           <span className={styles.sticker}>
-            <Sparkles size={12} strokeWidth={2} />
+            <Sparkles size={14} strokeWidth={1.8} />
             Curated by campus
           </span>
 
           <span className={styles.locationTag}>
-            <MapPin size={12} strokeWidth={1.9} />
+            <MapPin size={14} strokeWidth={1.8} />
             {heroListing.pickup}
           </span>
         </div>
@@ -337,7 +337,7 @@ export function HomePage() {
             </p>
             {savedIds.size > 0 ? (
               <p className={styles.savedCount}>
-                <Heart size={12} strokeWidth={2} fill="currentColor" aria-hidden="true" />
+                <Heart size={14} strokeWidth={1.8} fill="currentColor" aria-hidden="true" />
                 {savedLabel}
               </p>
             ) : null}
@@ -386,7 +386,7 @@ export function HomePage() {
 
       <section className={styles.sellBand} aria-labelledby="sell-band-title">
         <span className={styles.bandStar} aria-hidden="true">
-          <Sparkles size={22} strokeWidth={1.7} />
+          <Sparkles size={24} strokeWidth={1.8} />
         </span>
 
         <div className={styles.bandCopy}>
@@ -396,7 +396,7 @@ export function HomePage() {
           </p>
           <h2 id="sell-band-title" className={styles.bandTitle}>
             Your old chapter is{' '}
-            <span className={styles.serif}>someone&rsquo;s next find.</span>
+            <span className={styles.accent}>someone&rsquo;s next find.</span>
           </h2>
           <p className={styles.bandText}>
             The shelf you have outgrown could kit out someone&rsquo;s first
@@ -406,7 +406,7 @@ export function HomePage() {
           <div className={styles.bandActions}>
             <ButtonLink to="/sell" variant="inverse" size="lg">
               Start a listing
-              <ArrowUpRight size={17} strokeWidth={2} aria-hidden="true" />
+              <ArrowUpRight size={18} strokeWidth={1.8} aria-hidden="true" />
             </ButtonLink>
           </div>
         </div>
@@ -450,7 +450,7 @@ export function HomePage() {
         </p>
         <a className={styles.backToTop} href="#top">
           Back to top
-          <ArrowUp size={13} strokeWidth={2} aria-hidden="true" />
+          <ArrowUp size={14} strokeWidth={1.8} aria-hidden="true" />
         </a>
       </footer>
     </div>

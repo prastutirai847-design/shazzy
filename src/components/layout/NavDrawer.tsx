@@ -87,7 +87,7 @@ export function NavDrawer({ open, onClose }: NavDrawerProps) {
             <Logo />
           </Link>
           <IconButton label="Close navigation" onClick={onClose}>
-            <X size={20} strokeWidth={2} />
+            <X size={20} strokeWidth={1.8} />
           </IconButton>
         </div>
 

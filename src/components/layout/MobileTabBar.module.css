@@ -33,10 +33,10 @@
   padding: 4px 2px 5px;
   border-radius: var(--radius-md);
   color: var(--color-ink-tertiary);
-  font-size: var(--text-xs);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0;
+  font-size: var(--type-navigation-size);
+  font-weight: var(--type-navigation-weight);
+  line-height: var(--type-navigation-line);
+  letter-spacing: var(--type-navigation-tracking);
   transition:
     background-color var(--duration-fast) ease,
     color var(--duration-fast) ease;

@@ -33,10 +33,10 @@
   place-items: center;
   width: 38px;
   height: 38px;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  background: var(--color-primary-soft);
-  color: var(--color-primary-text);
+  background: var(--color-canvas);
+  color: var(--color-ink-secondary);
   transition:
     background-color var(--duration-base) ease,
     border-color var(--duration-base) ease,
@@ -73,28 +73,28 @@
 
 .label {
   color: var(--color-ink);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.012em;
+  font-size: var(--type-callout-size);
+  font-weight: var(--type-product-title-weight);
+  line-height: var(--type-product-title-line);
+  letter-spacing: var(--type-product-title-tracking);
   text-wrap: balance;
   transition: color var(--duration-base) ease;
 }
 
 .count {
   color: var(--color-ink-tertiary);
-  font-size: var(--text-xs);
-  font-weight: 400;
-  line-height: 1.35;
+  font-size: var(--type-footnote-size);
+  font-weight: var(--type-footnote-weight);
+  line-height: var(--type-footnote-line);
   font-variant-numeric: tabular-nums;
   transition: color var(--duration-base) ease;
 }
 
 .countEmpty {
   color: var(--color-ink-tertiary);
-  font-size: var(--text-xs);
+  font-size: var(--type-footnote-size);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--type-footnote-weight);
 }
 
 .watermark {
@@ -116,9 +116,9 @@
 }
 
 .selected {
-  border-color: rgba(0, 122, 255, 0.4);
+  border-color: rgba(0, 113, 227, 0.4);
   background: var(--color-primary-soft);
-  box-shadow: inset 0 0 0 1px rgba(0, 122, 255, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(0, 113, 227, 0.12);
 }
 
 .selected .iconWrap {
@@ -129,7 +129,7 @@
 }
 
 .selected .affordance {
-  border-color: rgba(0, 122, 255, 0.18);
+  border-color: rgba(0, 113, 227, 0.18);
   background: var(--color-surface);
   color: var(--color-primary-text);
 }
@@ -139,7 +139,7 @@
 }
 
 .selected .count {
-  color: rgba(0, 102, 214, 0.82);
+  color: var(--color-primary-text);
 }
 
 .selected .watermark {
@@ -168,12 +168,12 @@
   }
 
   .selected:hover {
-    border-color: rgba(0, 122, 255, 0.56);
+    border-color: rgba(0, 113, 227, 0.56);
   }
 
   .selected:hover .affordance {
     background: var(--color-surface);
-    border-color: rgba(0, 122, 255, 0.24);
+    border-color: rgba(0, 113, 227, 0.24);
   }
 
   .selected:hover .affordance svg {
@@ -192,15 +192,15 @@
   }
 
   .label {
-    font-size: var(--text-base);
+    font-size: var(--type-body-size);
   }
 
   .count {
-    font-size: var(--text-sm);
+    font-size: var(--type-footnote-size);
   }
 
   .countEmpty {
-    font-size: var(--text-sm);
+    font-size: var(--type-footnote-size);
   }
 }
 
@@ -211,14 +211,14 @@
   }
 
   .label {
-    font-size: var(--text-sm);
+    font-size: var(--type-callout-size);
   }
 
   .count {
-    font-size: 0.6875rem;
+    font-size: var(--type-caption-size);
   }
 
   .countEmpty {
-    font-size: var(--text-xs);
+    font-size: var(--type-caption-size);
   }
 }

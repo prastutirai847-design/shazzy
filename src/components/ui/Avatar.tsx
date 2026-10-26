@@ -8,7 +8,7 @@ interface AvatarProps {
   className?: string
 }
 
-const iconSizes = { xs: 12, sm: 15, md: 17, lg: 22 } as const
+const iconSizes = { xs: 14, sm: 16, md: 18, lg: 24 } as const
 
 function getInitials(name: string): string | null {
   const parts = name.trim().split(/\s+/).filter(Boolean)
@@ -29,7 +29,7 @@ export function Avatar({ name, size = 'md', className }: AvatarProps) {
 
   return (
     <span className={cx(styles.avatar, styles[size], className)} aria-hidden="true">
-      {initials ?? <UserRound size={iconSizes[size]} strokeWidth={1.9} />}
+      {initials ?? <UserRound size={iconSizes[size]} strokeWidth={1.8} />}
     </span>
   )
 }

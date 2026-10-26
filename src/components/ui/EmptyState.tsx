@@ -13,7 +13,7 @@ export function EmptyState({ icon: Icon, title, description, children }: EmptySt
   return (
     <div className={styles.emptyState}>
       <div className={styles.iconWrap} aria-hidden="true">
-        <Icon size={30} strokeWidth={1.7} />
+        <Icon size={30} strokeWidth={1.8} />
       </div>
       <h2 className={styles.title}>{title}</h2>
       <p className={styles.description}>{description}</p>

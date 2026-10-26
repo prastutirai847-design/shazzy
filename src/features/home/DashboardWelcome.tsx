@@ -23,7 +23,7 @@ export function DashboardWelcome() {
       <div className={styles.top}>
         <div className={styles.copy}>
           <p id="dashboard-welcome-greeting" className={styles.greeting}>
-            Welcome to <span className={styles.serif}>Campus Kart.</span>
+            Welcome to <span className={styles.accent}>Campus Kart.</span>
           </p>
           <p className={styles.subtitle}>
             Discover and exchange pre-owned items with students on your campus.
@@ -32,7 +32,7 @@ export function DashboardWelcome() {
 
         <div className={styles.cta}>
           <ButtonLink to="/sell" size="lg" className={styles.ctaButton}>
-            <Plus size={17} strokeWidth={2} aria-hidden="true" />
+            <Plus size={18} strokeWidth={1.8} aria-hidden="true" />
             Sell an Item
           </ButtonLink>
         </div>

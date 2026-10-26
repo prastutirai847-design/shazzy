@@ -19,13 +19,13 @@ export function QuickActionLink({
   return (
     <Link to={to} className={cx(styles.action, className)}>
       <span className={styles.icon} aria-hidden="true">
-        <Icon size={17} strokeWidth={1.9} />
+        <Icon size={18} strokeWidth={1.8} />
       </span>
       <span className={styles.label}>{label}</span>
       <ArrowUpRight
         className={styles.arrow}
-        size={15}
-        strokeWidth={1.9}
+        size={16}
+        strokeWidth={1.8}
         aria-hidden="true"
       />
     </Link>

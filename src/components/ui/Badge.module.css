@@ -6,10 +6,10 @@
   padding: 3px 9px;
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
-  font-size: 0.625rem;
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
+  font-size: var(--type-caption-size);
+  font-weight: var(--type-caption-weight);
+  line-height: var(--type-caption-line);
+  letter-spacing: var(--type-caption-tracking);
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -19,7 +19,7 @@
 }
 
 .soft {
-  border-color: rgba(0, 122, 255, 0.12);
+  border-color: rgba(0, 113, 227, 0.12);
   background: var(--color-primary-soft);
   color: var(--color-primary-text);
 }
@@ -31,7 +31,7 @@
 }
 
 .success {
-  border-color: rgba(36, 138, 61, 0.12);
+  border-color: rgba(31, 122, 54, 0.12);
   background: var(--color-success-soft);
   color: var(--color-success);
 }

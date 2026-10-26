@@ -18,16 +18,16 @@ export function SellCta({ onNavigate }: NavigationProps) {
       {({ isActive }) => (
         <>
           <span className={styles.sellIcon} aria-hidden="true">
-            <Plus size={18} strokeWidth={2.2} />
+            <Plus size={18} strokeWidth={1.8} />
           </span>
           <span className={styles.sellLabel}>Sell an item</span>
           {isActive ? (
-            <Check className={styles.sellArrow} size={17} strokeWidth={2.1} aria-hidden="true" />
+            <Check className={styles.sellArrow} size={18} strokeWidth={1.8} aria-hidden="true" />
           ) : (
             <ArrowUpRight
               className={styles.sellArrow}
-              size={17}
-              strokeWidth={1.9}
+              size={18}
+              strokeWidth={1.8}
               aria-hidden="true"
             />
           )}
@@ -56,7 +56,7 @@ export function PrimaryNav({ onNavigate }: NavigationProps) {
                     onClick={onNavigate}
                     className={({ isActive }) => cx(styles.navLink, isActive && styles.active)}
                   >
-                    <Icon size={19} strokeWidth={1.9} aria-hidden="true" />
+                    <Icon size={20} strokeWidth={1.8} aria-hidden="true" />
                     <span>{section.label}</span>
                   </NavLink>
                 </li>
@@ -73,7 +73,7 @@ export function TrustNote() {
   return (
     <div className={styles.trustNote}>
       <span className={styles.trustIcon} aria-hidden="true">
-        <ShieldCheck size={17} strokeWidth={1.9} />
+        <ShieldCheck size={18} strokeWidth={1.8} />
       </span>
       <div>
         <p className={styles.trustTitle}>Made for student life</p>

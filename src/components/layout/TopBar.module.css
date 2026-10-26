@@ -67,8 +67,8 @@
   background: var(--color-primary);
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.92);
   color: var(--color-primary-contrast);
-  font-size: 0.5625rem;
-  font-weight: 700;
+  font-size: var(--type-caption-size);
+  font-weight: 600;
   line-height: 1;
   letter-spacing: 0;
 }

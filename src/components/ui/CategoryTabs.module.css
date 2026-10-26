@@ -22,10 +22,10 @@
   min-height: 44px;
   padding: 0 1px 14px;
   color: var(--color-ink-secondary);
-  font-size: var(--text-base);
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: -0.01em;
+  font-size: var(--type-navigation-size);
+  font-weight: var(--type-navigation-weight);
+  line-height: var(--type-navigation-line);
+  letter-spacing: var(--type-navigation-tracking);
   white-space: nowrap;
   transition: color var(--duration-fast) ease;
 }
@@ -70,7 +70,4 @@
     gap: 22px;
   }
 
-  .tab {
-    font-size: var(--text-sm);
-  }
 }

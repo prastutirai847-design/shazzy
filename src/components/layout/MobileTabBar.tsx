@@ -24,11 +24,11 @@ export function MobileTabBar() {
             >
               {isSell ? (
                 <span className={styles.sellIcon} aria-hidden="true">
-                  <Plus size={23} strokeWidth={2.2} />
+                  <Plus size={24} strokeWidth={1.8} />
                 </span>
               ) : (
                 <span className={styles.iconWrap} aria-hidden="true">
-                  <Icon size={21} strokeWidth={1.9} />
+                  <Icon size={20} strokeWidth={1.8} />
                 </span>
               )}
               <span className={styles.label}>

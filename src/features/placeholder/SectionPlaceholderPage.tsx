@@ -38,15 +38,15 @@ export function SectionPlaceholderPage({ section }: SectionPlaceholderPageProps)
         <div className={styles.statusBar}>
           <div className={styles.statusList}>
             <span>
-              <Check size={14} strokeWidth={2.2} aria-hidden="true" />
+              <Check size={14} strokeWidth={1.8} aria-hidden="true" />
               Route connected
             </span>
             <span>
-              <Check size={14} strokeWidth={2.2} aria-hidden="true" />
+              <Check size={14} strokeWidth={1.8} aria-hidden="true" />
               Layout ready
             </span>
             <span className={styles.pending}>
-              <Clock3 size={14} strokeWidth={2} aria-hidden="true" />
+              <Clock3 size={14} strokeWidth={1.8} aria-hidden="true" />
               Feature arriving in a later stage
             </span>
           </div>

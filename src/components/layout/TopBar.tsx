@@ -41,7 +41,7 @@ function HeaderAction({ sectionId, unreadCount = 0, className }: HeaderActionPro
       label={hasUnread ? `${section.label}, ${unreadCount} unread` : section.label}
       className={cx(styles.headerAction, className)}
     >
-      <Icon size={19} strokeWidth={1.9} aria-hidden="true" />
+      <Icon size={20} strokeWidth={1.8} aria-hidden="true" />
       {hasUnread ? (
         <span className={styles.unreadBadge} aria-hidden="true">
           {unreadCount > 9 ? '9+' : unreadCount}
@@ -114,7 +114,7 @@ export function TopBar({ isNavOpen, onOpenNav, unreadCounts }: TopBarProps) {
             aria-expanded={isNavOpen}
             aria-controls={NAV_DIALOG_ID}
           >
-            <Menu size={20} strokeWidth={2} />
+            <Menu size={20} strokeWidth={1.8} />
           </IconButton>
 
           <Link to="/" className={styles.brand} aria-label="Campus Kart home">

@@ -2,42 +2,43 @@
   color-scheme: light;
 
   --font-sans:
-    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif;
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-display:
-    -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif;
-  --font-serif: var(--font-sans);
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono',
+    monospace;
 
   --color-canvas: #f5f5f7;
   --color-canvas-deep: #e8e8ed;
+  --color-shimmer: #ececf0;
   --color-surface: #ffffff;
   --color-surface-subtle: #fbfbfd;
   --color-surface-translucent: rgba(255, 255, 255, 0.78);
   --color-sidebar: rgba(255, 255, 255, 0.72);
   --color-ink: #1d1d1f;
   --color-ink-secondary: #6e6e73;
-  --color-ink-tertiary: #8e8e93;
+  --color-ink-tertiary: #6f6f74;
   --color-ink-inverse: #ffffff;
   --color-border: rgba(60, 60, 67, 0.12);
   --color-border-strong: rgba(60, 60, 67, 0.24);
-  --color-border-solid: #e5e5ea;
+  --color-border-solid: #d2d2d7;
   --color-scrim: rgba(0, 0, 0, 0.28);
 
-  --color-primary: #007aff;
+  --color-primary: #0071e3;
   --color-primary-strong: #0062cc;
-  --color-primary-text: #0066cc;
-  --color-primary-soft: rgba(0, 122, 255, 0.1);
-  --color-primary-soft-strong: rgba(0, 122, 255, 0.18);
+  --color-primary-text: var(--color-primary-strong);
+  --color-primary-soft: rgba(0, 113, 227, 0.1);
+  --color-primary-soft-strong: rgba(0, 113, 227, 0.18);
   --color-primary-contrast: #ffffff;
   --color-accent: #ff9500;
   --color-accent-soft: #fff3e0;
   --color-accent-ink: #8a4b00;
-  --color-success: #248a3d;
+  --color-success: #1f7a36;
   --color-success-soft: #e8f8ec;
-  --color-focus: #007aff;
+  --color-focus: #0071e3;
 
-  --gradient-primary: linear-gradient(180deg, #0a84ff 0%, #007aff 100%);
+  --gradient-primary: linear-gradient(180deg, #0071e3 0%, #0062cc 100%);
   --gradient-avatar: linear-gradient(145deg, #f2f7ff 0%, #e3edf9 100%);
 
   --radius-xs: 6px;
@@ -60,13 +61,120 @@
   --shadow-image: 0 18px 36px -26px rgba(0, 0, 0, 0.3);
   --shadow-dock: 0 -1px 0 rgba(0, 0, 0, 0.06);
 
-  --text-xs: 0.6875rem;
-  --text-sm: 0.75rem;
-  --text-base: 0.9375rem;
+  /*
+   * Responsive type scale — 16px root.
+   * Desktop targets: display 52–60, page 30–36, section 24–28,
+   * subheading 18–21. Fluid sizes never go below their mobile floor.
+   */
+  --type-display-size: clamp(2rem, 1.36rem + 2.7vw, 3.25rem);
+  --type-display-line: 1.06;
+  --type-display-weight: 600;
+  --type-display-tracking: -0.03em;
+
+  --type-title-1-size: clamp(1.75rem, 1.55rem + 0.9vw, 2.25rem);
+  --type-title-1-line: 1.16;
+  --type-title-1-weight: 600;
+  --type-title-1-tracking: -0.02em;
+
+  --type-title-2-size: clamp(1.5rem, 1.35rem + 0.65vw, 1.75rem);
+  --type-title-2-line: 1.25;
+  --type-title-2-weight: 600;
+  --type-title-2-tracking: -0.018em;
+
+  --type-title-3-size: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --type-title-3-line: 1.35;
+  --type-title-3-weight: 600;
+  --type-title-3-tracking: -0.01em;
+
+  --type-headline-size: 1.0625rem;
+  --type-headline-line: 1.3;
+  --type-headline-weight: 600;
+  --type-headline-tracking: -0.012em;
+
+  --type-body-size: 0.9375rem;
+  --type-body-line: 1.5;
+  --type-body-weight: 400;
+  --type-body-tracking: -0.003em;
+
+  --type-callout-size: 0.875rem;
+  --type-callout-line: 1.45;
+  --type-callout-weight: 500;
+  --type-callout-tracking: 0;
+
+  --type-subhead-size: 0.8125rem;
+  --type-subhead-line: 1.4;
+  --type-subhead-weight: 500;
+  --type-subhead-tracking: 0;
+
+  --type-footnote-size: 0.75rem;
+  --type-footnote-line: 1.4;
+  --type-footnote-weight: 400;
+  --type-footnote-tracking: 0;
+
+  --type-caption-size: 0.6875rem;
+  --type-caption-line: 1.3;
+  --type-caption-weight: 500;
+  --type-caption-tracking: 0.01em;
+
+  --type-overline-size: 0.6875rem;
+  --type-overline-line: 1.3;
+  --type-overline-weight: 600;
+  --type-overline-tracking: 0.06em;
+
+  /* Role tokens map the marketplace UI onto the core ramp. */
+  --type-navigation-size: 0.875rem;
+  --type-navigation-line: 1.4;
+  --type-navigation-weight: 500;
+  --type-navigation-tracking: 0;
+
+  --type-product-title-size: 0.9375rem;
+  --type-product-title-line: 1.35;
+  --type-product-title-weight: 500;
+  --type-product-title-tracking: 0;
+
+  --type-price-size: clamp(1rem, 0.9rem + 0.35vw, 1.25rem);
+  --type-price-line: 1.3;
+  --type-price-weight: 600;
+  --type-price-tracking: -0.01em;
+
+  --type-price-card-size: 1.125rem;
+  --type-price-card-line: 1.25;
+
+  --type-button-size: 0.9375rem;
+  --type-button-line: 1.2;
+  --type-button-weight: 600;
+  --type-button-tracking: 0;
+  --type-button-sm-size: 0.875rem;
+
+  --type-metadata-size: var(--type-footnote-size);
+  --type-metadata-line: var(--type-footnote-line);
+  --type-metadata-weight: var(--type-footnote-weight);
+  --type-metadata-tracking: var(--type-footnote-tracking);
+
+  --type-fine-size: 0.6875rem;
+  --type-fine-line: 1.45;
+  --type-fine-weight: 400;
+  --type-fine-tracking: 0;
+
+  /* Legacy aliases kept so older modules inherit the same ramp. */
+  --text-xs: var(--type-caption-size);
+  --text-sm: var(--type-footnote-size);
+  --text-base: var(--type-body-size);
   --text-md: 1rem;
-  --text-lg: 1.0625rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.75rem;
+  --text-lg: var(--type-headline-size);
+  --text-xl: var(--type-title-3-size);
+  --text-2xl: var(--type-title-2-size);
+
+  /* Icon system — 14/16/18/20/24/26/30 plus a single optical stroke. */
+  --icon-xs: 14px;
+  --icon-sm: 16px;
+  --icon-md: 18px;
+  --icon-lg: 20px;
+  --icon-xl: 24px;
+  --icon-2xl: 26px;
+  --icon-3xl: 30px;
+  --icon-stroke: 1.8;
+  --icon-gap: 6px;
 
   --space-2xs: 4px;
   --space-xs: 8px;
@@ -88,5 +196,5 @@
   --topbar-height: 60px;
   --content-max: 1120px;
   --gutter: clamp(20px, 4vw, 48px);
-  --tabbar-height: 64px;
+  --tabbar-height: 75px;
 }

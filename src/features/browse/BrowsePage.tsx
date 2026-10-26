@@ -222,7 +222,7 @@ export function BrowsePage() {
     resultsContent = (
       <div className={styles.errorPanel} role="alert">
         <span className={styles.errorIcon} aria-hidden="true">
-          <TriangleAlert size={22} strokeWidth={1.8} />
+          <TriangleAlert size={24} strokeWidth={1.8} />
         </span>
         <div className={styles.errorCopy}>
           <h3 className={styles.stateTitle}>Listings couldn’t load.</h3>
@@ -400,7 +400,7 @@ export function BrowsePage() {
                 className={styles.clearButton}
                 onClick={clearFilters}
               >
-                <RotateCcw size={13} strokeWidth={2} aria-hidden="true" />
+                <RotateCcw size={14} strokeWidth={1.8} aria-hidden="true" />
                 Clear filters
               </Button>
             ) : null}

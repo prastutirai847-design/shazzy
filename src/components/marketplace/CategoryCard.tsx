@@ -30,13 +30,13 @@ export function CategoryCard({
     >
       <span className={styles.top}>
         <span className={styles.iconWrap} aria-hidden="true">
-          <Icon size={21} strokeWidth={1.75} />
+          <Icon size={20} strokeWidth={1.8} />
         </span>
         <span className={styles.affordance} aria-hidden="true">
           {selected ? (
-            <Check size={14} strokeWidth={2.4} />
+            <Check size={14} strokeWidth={1.8} />
           ) : (
-            <ArrowDown size={13} strokeWidth={2} />
+            <ArrowDown size={14} strokeWidth={1.8} />
           )}
         </span>
       </span>
@@ -49,7 +49,7 @@ export function CategoryCard({
       </span>
 
       <span className={styles.watermark} aria-hidden="true">
-        <Icon size={104} strokeWidth={1} />
+        <Icon size={104} strokeWidth={1.2} />
       </span>
     </button>
   )

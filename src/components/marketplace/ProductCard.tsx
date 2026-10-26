@@ -1,4 +1,4 @@
-import { ArrowUpRight, Heart, ImageOff, MapPin } from 'lucide-react'
+import { ArrowUpRight, Heart, ImageOff } from 'lucide-react'
 import { useId, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { categoryLabels } from '../../data/categories'
@@ -35,7 +35,7 @@ export function ProductCard({ product, saved, onToggleSave }: ProductCardProps) 
       <div className={styles.media}>
         {imageStatus === 'error' ? (
           <div className={styles.fallback}>
-            <ImageOff size={22} strokeWidth={1.6} aria-hidden="true" />
+            <ImageOff size={24} strokeWidth={1.8} aria-hidden="true" />
             <span>Photo unavailable</span>
           </div>
         ) : (
@@ -74,8 +74,8 @@ export function ProductCard({ product, saved, onToggleSave }: ProductCardProps) 
           onClick={() => onToggleSave(product)}
         >
           <Heart
-            size={17}
-            strokeWidth={1.9}
+            size={18}
+            strokeWidth={1.8}
             fill={saved ? 'currentColor' : 'none'}
             aria-hidden="true"
           />
@@ -89,7 +89,6 @@ export function ProductCard({ product, saved, onToggleSave }: ProductCardProps) 
             ·
           </span>
           <span className={styles.place}>
-            <MapPin size={12} strokeWidth={1.9} aria-hidden="true" />
             <span className={styles.placeText}>{product.pickup}</span>
           </span>
         </p>
@@ -116,7 +115,7 @@ export function ProductCard({ product, saved, onToggleSave }: ProductCardProps) 
             aria-label={`View details for ${product.title}`}
           >
             View details
-            <ArrowUpRight size={14} strokeWidth={2} aria-hidden="true" />
+            <ArrowUpRight size={14} strokeWidth={1.8} aria-hidden="true" />
           </Link>
         </div>
       </div>

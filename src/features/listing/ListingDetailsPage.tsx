@@ -63,7 +63,7 @@ function ListingMedia({ listing }: ListingMediaProps) {
         {status === 'error' ? (
           <div className={styles.imageFallback}>
             <span className={styles.fallbackIcon} aria-hidden="true">
-              <ImageOff size={26} strokeWidth={1.6} />
+              <ImageOff size={26} strokeWidth={1.8} />
             </span>
             <p className={styles.fallbackTitle}>Photo unavailable</p>
             <span className={styles.fallbackText}>
@@ -103,7 +103,7 @@ function ListingNotFound() {
     <div className={styles.page}>
       <div className={styles.topBar}>
         <Link to="/search" className={styles.backLink}>
-          <ArrowLeft size={15} strokeWidth={2} aria-hidden="true" />
+          <ArrowLeft size={16} strokeWidth={1.8} aria-hidden="true" />
           Back to marketplace
         </Link>
         <Badge variant="neutral">Listing not found</Badge>
@@ -160,7 +160,7 @@ function ListingDetailsView({ listing }: ListingDetailsViewProps) {
     <div className={styles.page}>
       <div className={styles.topBar}>
         <Link to="/search" className={styles.backLink}>
-          <ArrowLeft size={15} strokeWidth={2} aria-hidden="true" />
+          <ArrowLeft size={16} strokeWidth={1.8} aria-hidden="true" />
           Back to marketplace
         </Link>
         <Badge variant="accent">Sample listing</Badge>
@@ -172,7 +172,7 @@ function ListingDetailsView({ listing }: ListingDetailsViewProps) {
 
           <aside className={styles.meetupNote} aria-label="Campus meetup tip">
             <span className={styles.meetupIcon} aria-hidden="true">
-              <MapPin size={16} strokeWidth={1.9} />
+              <MapPin size={16} strokeWidth={1.8} />
             </span>
             <div>
               <p className={styles.meetupTitle}>Plan a campus meetup</p>
@@ -212,7 +212,7 @@ function ListingDetailsView({ listing }: ListingDetailsViewProps) {
               className={styles.actionButton}
               aria-label={`Contact ${listing.seller.name} about ${listing.title}`}
             >
-              <MessageCircle size={17} strokeWidth={2} aria-hidden="true" />
+              <MessageCircle size={18} strokeWidth={1.8} aria-hidden="true" />
               Contact seller
             </ButtonLink>
 
@@ -224,8 +224,8 @@ function ListingDetailsView({ listing }: ListingDetailsViewProps) {
               onClick={() => handleToggleSave(listing)}
             >
               <Heart
-                size={17}
-                strokeWidth={1.9}
+                size={18}
+                strokeWidth={1.8}
                 fill={saved ? 'currentColor' : 'none'}
                 aria-hidden="true"
               />
@@ -234,7 +234,7 @@ function ListingDetailsView({ listing }: ListingDetailsViewProps) {
           </div>
 
           <p className={styles.actionNote}>
-            <MessageCircle size={13} strokeWidth={1.9} aria-hidden="true" />
+            <MessageCircle size={14} strokeWidth={1.8} aria-hidden="true" />
             Contact seller opens the Messages preview. Live chat is not connected
             in this demo.
           </p>
@@ -286,7 +286,7 @@ function ListingDetailsView({ listing }: ListingDetailsViewProps) {
               </div>
             </div>
             <p className={styles.privacyNote}>
-              <ShieldCheck size={14} strokeWidth={1.9} aria-hidden="true" />
+              <ShieldCheck size={14} strokeWidth={1.8} aria-hidden="true" />
               Only the seller&rsquo;s name, year, and pickup spot are shown.
               Private contact details stay hidden.
             </p>
@@ -309,7 +309,7 @@ function ListingDetailsView({ listing }: ListingDetailsViewProps) {
             action={
               <ButtonLink to="/search" variant="secondary" size="sm">
                 Browse all
-                <ArrowRight size={14} strokeWidth={2} aria-hidden="true" />
+                <ArrowRight size={14} strokeWidth={1.8} aria-hidden="true" />
               </ButtonLink>
             }
           />

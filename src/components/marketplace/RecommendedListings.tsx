@@ -38,7 +38,7 @@ function StatePanel({ tone, icon: Icon, title, description, action }: StatePanel
       role={tone === 'error' ? 'alert' : 'status'}
     >
       <span className={styles.stateIcon} aria-hidden="true">
-        <Icon size={22} strokeWidth={1.8} />
+        <Icon size={24} strokeWidth={1.8} />
       </span>
       <div className={styles.stateCopy}>
         <h3 className={styles.stateTitle}>{title}</h3>
@@ -162,7 +162,7 @@ export function RecommendedListings({
                 aria-label="View all marketplace listings"
               >
                 View all
-                <ArrowRight size={14} strokeWidth={2} aria-hidden="true" />
+                <ArrowRight size={14} strokeWidth={1.8} aria-hidden="true" />
               </ButtonLink>
             ) : undefined
           }

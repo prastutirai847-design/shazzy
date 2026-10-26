@@ -14,10 +14,10 @@
 }
 
 .wordmark {
-  font-size: var(--text-lg);
-  font-weight: 700;
+  font-size: var(--type-headline-size);
+  font-weight: 600;
   line-height: 1;
-  letter-spacing: -0.032em;
+  letter-spacing: -0.03em;
   white-space: nowrap;
 }
 

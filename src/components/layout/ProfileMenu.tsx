@@ -83,7 +83,7 @@ export function ProfileMenu() {
         onClick={() => setIsOpen((open) => !open)}
       >
         <Avatar />
-        <ChevronDown className={styles.chevron} size={14} strokeWidth={2} aria-hidden="true" />
+        <ChevronDown className={styles.chevron} size={14} strokeWidth={1.8} aria-hidden="true" />
       </button>
 
       {isOpen ? (
@@ -113,7 +113,7 @@ export function ProfileMenu() {
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) => cx(styles.link, isActive && styles.linkActive)}
                 >
-                  <Icon size={16} strokeWidth={1.9} aria-hidden="true" />
+                  <Icon size={16} strokeWidth={1.8} aria-hidden="true" />
                   <span>{section.label}</span>
                 </NavLink>
               )
