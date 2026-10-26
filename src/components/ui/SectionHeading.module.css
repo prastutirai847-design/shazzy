@@ -3,7 +3,7 @@
   align-items: flex-end;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 14px 20px;
+  gap: 16px 22px;
 }
 
 .copy {
@@ -14,17 +14,17 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
   color: var(--color-ink-secondary);
-  font-size: 0.671875rem;
-  font-weight: 590;
+  font-size: 0.6875rem;
+  font-weight: 600;
   line-height: 1.3;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .eyebrowRule {
-  width: 18px;
+  width: 16px;
   height: 1px;
   flex: none;
   background: var(--color-primary);
@@ -39,10 +39,10 @@
 
 .title {
   color: var(--color-ink);
-  font-size: clamp(1.45rem, 2.1vw, 1.7rem);
-  font-weight: 620;
-  line-height: 1.15;
-  letter-spacing: -0.038em;
+  font-size: clamp(1.5rem, 2.2vw, 1.75rem);
+  font-weight: 650;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
 }
 
 .meta {
@@ -52,9 +52,9 @@
 
 .description {
   max-width: 56ch;
-  margin-top: 7px;
+  margin-top: 8px;
   color: var(--color-ink-secondary);
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
 }
 
@@ -65,11 +65,11 @@
 
 @media (max-width: 560px) {
   .title {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
   }
 
   .description {
-    margin-top: 6px;
-    font-size: 0.875rem;
+    margin-top: 7px;
+    font-size: 0.9rem;
   }
 }

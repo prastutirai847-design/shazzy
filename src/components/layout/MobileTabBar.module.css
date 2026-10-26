@@ -5,12 +5,12 @@
   left: 0;
   z-index: 30;
   display: none;
-  padding: 5px 8px calc(5px + env(safe-area-inset-bottom));
+  padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
   border-top: 1px solid var(--color-border);
-  background: rgba(250, 246, 236, 0.94);
+  background: rgba(249, 247, 241, 0.82);
   box-shadow: var(--shadow-dock);
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
 }
 
 .inner {
@@ -18,7 +18,7 @@
   grid-template-columns: repeat(5, 1fr);
   align-items: end;
   width: 100%;
-  max-width: 560px;
+  max-width: 520px;
   margin: 0 auto;
 }
 
@@ -28,10 +28,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  min-height: 54px;
-  gap: 2px;
-  padding: 5px 2px 7px;
-  border-radius: var(--radius-sm);
+  min-height: 52px;
+  gap: 3px;
+  padding: 4px 2px 5px;
+  border-radius: var(--radius-md);
   color: var(--color-ink-tertiary);
   font-size: 0.625rem;
   font-weight: 540;
@@ -43,28 +43,15 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.tab::after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 14px;
-  height: 2px;
-  border-radius: 2px;
-  background: transparent;
-  content: '';
-  transform: translateX(-50%);
-  transition: background-color var(--duration-fast) ease;
-}
-
 .tab:hover {
-  background: rgba(46, 34, 48, 0.04);
+  background: rgba(118, 118, 128, 0.08);
   color: var(--color-ink-secondary);
 }
 
 .iconWrap {
   display: grid;
   place-items: center;
-  width: 30px;
+  width: 32px;
   height: 24px;
   color: inherit;
   transition: color var(--duration-fast) ease;
@@ -72,11 +59,7 @@
 
 .tab.active {
   color: var(--color-primary-text);
-  font-weight: 590;
-}
-
-.tab.active::after {
-  background: var(--color-primary);
+  font-weight: 620;
 }
 
 .sellTab {
@@ -86,11 +69,11 @@
 .sellIcon {
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 38px;
-  margin-top: -15px;
-  border: 1px solid rgba(42, 22, 100, 0.18);
-  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  margin-top: -19px;
+  border: 1px solid rgba(42, 22, 100, 0.16);
+  border-radius: 50%;
   background-color: var(--color-primary);
   background-image: var(--gradient-primary);
   color: var(--color-primary-contrast);
@@ -109,20 +92,12 @@
   transform: translateY(-1px);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 3px 0 rgba(52, 28, 152, 0.3),
-    0 14px 20px -14px rgba(58, 32, 160, 0.5);
+    0 2px 4px rgba(52, 28, 152, 0.24),
+    0 12px 22px -14px rgba(58, 32, 160, 0.55);
 }
 
 .sellTab:active .sellIcon {
-  transform: translateY(1px);
-}
-
-.sellTab.active {
-  color: var(--color-primary-text);
-}
-
-.sellTab.active::after {
-  background: var(--color-primary);
+  transform: scale(0.95);
 }
 
 @media (max-width: 767px) {

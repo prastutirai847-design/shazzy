@@ -15,9 +15,9 @@
 
 .drawer::backdrop {
   background: var(--color-scrim);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  animation: backdropIn 200ms ease both;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: backdropIn 220ms ease both;
 }
 
 .drawer:focus {
@@ -27,20 +27,25 @@
 .panel {
   display: flex;
   flex-direction: column;
-  width: min(324px, 88vw);
+  width: min(320px, 86vw);
   height: 100%;
-  gap: 20px;
-  padding: calc(20px + env(safe-area-inset-top)) 16px
+  gap: 22px;
+  padding: calc(20px + env(safe-area-inset-top)) 14px
     calc(18px + env(safe-area-inset-bottom));
   overflow-y: auto;
   overscroll-behavior: contain;
   border-right: 1px solid var(--color-border);
-  background: var(--color-surface-subtle);
+  background-color: var(--color-surface-subtle);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 200px
+  );
   box-shadow: var(--shadow-raised);
 }
 
 .drawer[open] .panel {
-  animation: panelIn 280ms var(--ease-out) both;
+  animation: panelIn 300ms var(--ease-out) both;
 }
 
 .header {
@@ -48,7 +53,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 0 4px;
+  padding: 0 6px;
 }
 
 .brand {
@@ -57,7 +62,7 @@
 }
 
 .brand:hover {
-  background: rgba(46, 34, 48, 0.04);
+  background: rgba(118, 118, 128, 0.08);
 }
 
 .navArea {
@@ -77,7 +82,7 @@
 @keyframes panelIn {
   from {
     opacity: 0.5;
-    transform: translateX(-20px);
+    transform: translateX(-24px);
   }
 
   to {

@@ -14,7 +14,7 @@
 
 .content {
   flex: 1;
-  padding: clamp(26px, 3.2vw, 42px) 0 72px;
+  padding: clamp(28px, 3.4vw, 46px) 0 80px;
 }
 
 .contentInner {
@@ -22,7 +22,7 @@
   max-width: calc(var(--content-max) + var(--gutter) * 2);
   margin: 0 auto;
   padding: 0 var(--gutter);
-  animation: pageIn 320ms var(--ease-out) both;
+  animation: pageIn 380ms var(--ease-out) both;
 }
 
 .skipLink {
@@ -35,7 +35,7 @@
   background: var(--color-ink);
   color: var(--color-ink-inverse);
   font-size: 0.8125rem;
-  font-weight: 560;
+  font-weight: 570;
   transform: translateY(-180%);
   transition: transform var(--duration-fast) var(--ease-out);
 }
@@ -51,7 +51,7 @@
 @keyframes pageIn {
   from {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(8px);
   }
 
   to {
@@ -68,10 +68,10 @@
 
 @media (max-width: 767px) {
   .content {
-    padding: 20px 0 calc(98px + env(safe-area-inset-bottom));
+    padding: 20px 0 calc(104px + env(safe-area-inset-bottom));
   }
 
   .contentInner {
-    animation-duration: 240ms;
+    animation-duration: 280ms;
   }
 }

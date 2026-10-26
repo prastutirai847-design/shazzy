@@ -2,14 +2,14 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  min-height: 23px;
-  padding: 3px 8px;
+  min-height: 22px;
+  padding: 3px 9px;
   border: 1px solid transparent;
-  border-radius: var(--radius-xs);
-  font-size: 0.65625rem;
-  font-weight: 620;
+  border-radius: var(--radius-pill);
+  font-size: 0.625rem;
+  font-weight: 640;
   line-height: 1.25;
-  letter-spacing: 0.075em;
+  letter-spacing: 0.055em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -19,25 +19,25 @@
 }
 
 .soft {
-  border-color: rgba(91, 61, 245, 0.14);
+  border-color: rgba(91, 61, 245, 0.12);
   background: var(--color-primary-soft);
   color: var(--color-primary-text);
 }
 
 .neutral {
   border-color: var(--color-border);
-  background: rgba(255, 253, 248, 0.6);
+  background: rgba(118, 118, 128, 0.08);
   color: var(--color-ink-secondary);
 }
 
 .success {
-  border-color: rgba(47, 107, 79, 0.14);
+  border-color: rgba(44, 106, 76, 0.12);
   background: var(--color-success-soft);
   color: var(--color-success);
 }
 
 .accent {
-  border-color: rgba(176, 114, 21, 0.18);
+  border-color: rgba(168, 106, 18, 0.14);
   background: var(--color-accent-soft);
   color: var(--color-accent-ink);
 }

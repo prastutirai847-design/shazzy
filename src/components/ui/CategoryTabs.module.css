@@ -12,18 +12,18 @@
 
 .tabs {
   display: flex;
-  gap: clamp(20px, 2.6vw, 32px);
+  gap: clamp(20px, 2.6vw, 30px);
   width: max-content;
   min-width: 100%;
 }
 
 .tab {
   position: relative;
-  min-height: 44px;
-  padding: 0 1px 12px;
+  min-height: 46px;
+  padding: 0 1px 14px;
   color: var(--color-ink-secondary);
   font-size: 0.84375rem;
-  font-weight: 520;
+  font-weight: 540;
   line-height: 1;
   letter-spacing: -0.01em;
   white-space: nowrap;
@@ -36,6 +36,7 @@
   bottom: -1px;
   left: 0;
   height: 2px;
+  border-radius: 2px;
   background: transparent;
   content: '';
   transition: background-color var(--duration-fast) ease;
@@ -56,7 +57,7 @@
 
 .active {
   color: var(--color-ink);
-  font-weight: 600;
+  font-weight: 620;
 }
 
 .active::after,

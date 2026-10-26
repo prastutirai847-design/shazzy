@@ -21,8 +21,9 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   font-size: var(--text-base);
-  font-weight: 430;
-  line-height: 1.58;
+  font-weight: 420;
+  line-height: 1.6;
+  font-optical-sizing: auto;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -46,9 +47,9 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 620;
-  line-height: 1.12;
-  letter-spacing: -0.034em;
+  font-weight: 640;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
@@ -79,6 +80,11 @@ button {
 
 button:disabled {
   cursor: not-allowed;
+}
+
+input,
+textarea {
+  caret-color: var(--color-primary);
 }
 
 ul,
@@ -133,5 +139,12 @@ svg {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --color-surface-translucent: #fffefa;
+    --color-sidebar: #fbf9f5;
   }
 }
